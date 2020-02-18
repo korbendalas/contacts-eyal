@@ -2,3 +2,7 @@
   background-color: #fff;
   border-color: #f5222d;
 }
+
+.has-error {
+  color: #f5222d !important;
+}
