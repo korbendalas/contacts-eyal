@@ -17,17 +17,17 @@ const AuthenticatedRoutes = () => (
 
 const UnauthenticatedRoutes = props => (
   <Switch>
-    <Route path="/login" component={() => <Login />} />
+    <Route path="/login" component={Login} />
     <Route render={() => <Redirect to="/login" />} />
   </Switch>
 );
 
 const Routes = () => {
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated } = useAuth();
 
   return (
     <div>
-      <NavBar handleLogout={logout} />
+      <NavBar />
       {isAuthenticated ? <AuthenticatedRoutes /> : <UnauthenticatedRoutes />}
     </div>
   );
